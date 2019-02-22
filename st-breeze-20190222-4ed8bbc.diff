@@ -1,5 +1,5 @@
 diff --git a/config.def.h b/config.def.h
-index 0e01717..c45f561 100644
+index 0e01717..f2dd9ea 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -5,7 +5,7 @@
@@ -11,7 +11,7 @@ index 0e01717..c45f561 100644
  static int borderpx = 2;
  
  /*
-@@ -84,31 +84,30 @@ unsigned int tabspaces = 8;
+@@ -84,31 +84,29 @@ unsigned int tabspaces = 8;
  
  /* Terminal colors (16 first used in escape sequence) */
  static const char *colorname[] = {
@@ -40,8 +40,7 @@ index 0e01717..c45f561 100644
 -	/* more colors can be added after 255 to use with DefaultXX */
 -	"#cccccc",
 -	"#555555",
-+
-+  /* 8 normal colors */
++	 /* 8 normal colors */
 +  [0] = "#31363b", /* black   */
 +  [1] = "#ed1515", /* red     */
 +  [2] = "#11d116", /* green   */
@@ -65,3 +64,16 @@ index 0e01717..c45f561 100644
 +  [256] = "#31363b", /* background */
 +  [257] = "#eff0f1", /* foreground */
  };
+ 
+ 
+@@ -118,8 +116,8 @@ static const char *colorname[] = {
+  */
+ unsigned int defaultfg = 7;
+ unsigned int defaultbg = 0;
+-static unsigned int defaultcs = 256;
+-static unsigned int defaultrcs = 257;
++static unsigned int defaultcs = 257;
++static unsigned int defaultrcs = 256;
+ 
+ /*
+  * Default shape of cursor
